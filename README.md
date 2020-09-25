@@ -14,4 +14,6 @@ Membuat kalkulator dan menemukan hal berikut untuk setiap merek :
 3. [x] Tanah. Memiliki atribut luas yang menyimpan informasi luas tanah dan method info untuk memberikan output atribut luas tanah
 
 ## Project
-Project dibuat dengan bahasa pemrograman Java
+Project dibuat dengan bahasa pemrograman Java dengan pendekatan antara lain
+- Menggunakan non-void method
+- Menggunakan object constructor
