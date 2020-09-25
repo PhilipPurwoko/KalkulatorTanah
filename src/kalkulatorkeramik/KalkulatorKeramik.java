@@ -6,10 +6,6 @@ package kalkulatorkeramik;
 
 // KalkulatorKeramik sebagai Main class
 public class KalkulatorKeramik {
-    // Method untuk membantu menampilkan informasi ke layar
-    void sout(){
-        
-    }
     // Main method
     public static void main(String[] args) {
         // Membuat objek keramik untuk masing masing merek
