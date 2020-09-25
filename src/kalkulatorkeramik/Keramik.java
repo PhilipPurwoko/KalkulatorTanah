@@ -1,19 +1,18 @@
-// @author PHILIP
+//@author Philip Purwoko
+// Github Portfolio : https://github.com/PhilipPurwoko
+// Medium Article : https://medium.com/@philippurwoko
+
 package kalkulatorkeramik;
 
 // Membuat class Keramik
 public class Keramik {
     // Deklarasi atribut keramik
-    float panjang;
-    float lebar;
-    float luas;
-    int harga;
-    int isi;
-    float luasKeramikTotal;
+    float panjang,lebar,luas,luasKeramikTotal;
+    int harga,isi;
     
-    // Class Constructor
-    public Keramik(float panjang,float lebar,int harga,int isi) {
-        // Mengatur atribut objek sesuai constructor
+    // Penerapan Object Constructor
+    Keramik(float panjang,float lebar,int harga,int isi) {
+        // Mengatur atribut objek sesuai dengan constructor
         this.panjang = panjang;
         this.lebar = lebar;
         this.harga = harga;
@@ -25,27 +24,28 @@ public class Keramik {
         this.luasKeramikTotal = this.luas * this.isi;
     }
     
-    // Method info() untuk print semua atribut objek
-    public void info(){
+    // Method untuk menampilkan semua informasi objek
+    void info(){
         System.out.println("Panjang : " + this.panjang + " m");
         System.out.println("Lebar : " + this.lebar + " m");
         System.out.println("Isi per dus : " + this.isi + " pcs");
         System.out.println("Harga per dus : Rp." + this.harga);
         System.out.println("Luas per keramik : " + this.luas + " m^2");
-        System.out.println("Luas total keramik satu dus : " + luasKeramikTotal + " m^2");
+        System.out.println("Luas total keramik satu dus : " + this.luasKeramikTotal + " m^2");
         System.out.println("");
     }
     
-    // Kalkulasi kebutuhan keramik
-    public void kalkulasi(){
-        // Membuat objek / instance tanah dari kelas Tanah dengan luas 100 m^2
-        Tanah tanah = new Tanah(100);
-        
-        // Perhitungan jumlah dan harga keramik yang dibutuhkan
-        float kebutuhanDus = tanah.luas / luasKeramikTotal;
+    // Menghitung kebutuhanDus
+    float hitungDus(int luasTanah){
+        float kebutuhanDus = luasTanah / this.luasKeramikTotal;
+        return kebutuhanDus;
+    }
+    
+    // Menghitung harga keramik total
+    void hitungHarga(float kebutuhanDus){
         float hargaTotal = kebutuhanDus * this.harga;
         
-        // Print hasil kalkulasi
+        // Menampilkan hasil kalkulasi
         System.out.println("Jumlah dus yang dibutuhkan : " + kebutuhanDus + " dus");
         System.out.println("Harga total : Rp." + hargaTotal);
         System.out.println("");
